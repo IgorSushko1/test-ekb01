@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
-import { Cars } from './cars.interface';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Cars } from '../cars.interface';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-car-flash-view',
+  templateUrl: './car-flash-view.component.html',
+  styleUrls: ['./car-flash-view.component.scss']
 })
-export class AppComponent {
-  title = 'test-ekb01';
+export class CarFlashViewComponent implements OnInit {
 
   cars: Cars[] = [
     {
@@ -53,4 +53,10 @@ export class AppComponent {
       fuelType: 'бензин'
     }
   ]
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }

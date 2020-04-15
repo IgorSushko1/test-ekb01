@@ -1,0 +1,35 @@
+.panel-with-cars {
+  padding-top: 20px;
+  padding-left: 30px;
+
+  &__header {
+    display: flex;
+    vertical-align: top;
+    margin-bottom: 20px;
+
+    &__mark {
+      font-size: 30px;
+      margin: 0;
+    }
+
+    &__amount {
+      font-size: 30px;
+      color: #aaaaaa;
+      margin: 0;
+      margin-left: 25px;
+    }
+
+    &__link {
+      color: red;
+      margin: 5px;
+      right: 0px;
+      flex-grow: 1;
+      text-align: end;
+      margin-right: 50px;
+    }
+  }
+}
+
+.app-car-flash-view {
+  display: flex;
+}

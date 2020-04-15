@@ -1,0 +1,6 @@
+<div *ngFor="let car of cars" class="car-flash-view">
+  <div><img src={{car.url}} class="car-flash-view__photo" /></div>
+  <div class="car-flash-view__amount">{{car.amount }} авто</div>
+  <div class="car-flash-view__name">{{car.model | uppercase}}</div>
+  <div class="car-flash-view__min-price">от {{car.minPrice}}</div>
+</div>
