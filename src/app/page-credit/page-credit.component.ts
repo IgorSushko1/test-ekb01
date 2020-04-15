@@ -9,11 +9,12 @@ import { Cars } from '../cars.interface';
 })
 export class PageCreditComponent implements OnInit {
 
-  @Input() cars: Cars[];
+  @Input() sended: Cars[];
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(`получение массива`, this.sended)
   }
 
 }

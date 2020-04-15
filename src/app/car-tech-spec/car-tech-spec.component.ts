@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Cars } from '../cars.interface';
+
 
 @Component({
   selector: 'app-car-tech-spec',
@@ -7,9 +9,21 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CarTechSpecComponent implements OnInit {
 
+  @Input() sended: Cars[];
+
+  car = this.sended;
+
   constructor() { }
 
+
+
+  log() {
+    // console.log(this.carsFromParent);
+  }
+
+
   ngOnInit(): void {
+    // this.log()
   }
 
 }

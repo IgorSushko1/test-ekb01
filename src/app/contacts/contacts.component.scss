@@ -1,0 +1,37 @@
+$linkColor: #b1b1b1;
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  width: 915px;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__icon_location {
+    width: 20px;
+    height: 20px;
+    -webkit-mask: url("../../assets/img/icons/location.svg") no-repeat;
+    mask: url("../../assets/img/icons/location.svg") no-repeat;
+    background-color: $linkColor;
+  }
+
+  &__adress {
+    color: $linkColor;
+    margin-left: 5px;
+  }
+
+  &__icon_phone {
+    width: 20px;
+    height: 20px;
+    -webkit-mask: url("../../assets/img/icons/phone.svg") no-repeat;
+    mask: url("../../assets/img/icons/phone.svg") no-repeat;
+    background-color: $linkColor;
+    margin-left: 20px;
+  }
+
+  &__phone-number {
+    text-decoration: none;
+    color: $linkColor;
+    margin-left: 10px;
+  }
+}

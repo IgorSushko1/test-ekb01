@@ -1,0 +1,75 @@
+$linkColor: #b1b1b1;
+
+.car-tech-spec {
+  width: 915px;
+  height: 155px;
+  display: flex;
+  flex-direction: row;
+
+  &__image {
+    width: 200px;
+    height: 155px;
+    background-image: url("../../assets/bmw 1series.jpg");
+  }
+
+  &__info {
+    margin-left: 38px;
+  }
+
+  &__title-head {
+    margin: 30px 0 25px 0;
+  }
+
+  &__spec {
+    display: flex;
+    width: 285px;
+    justify-content: space-between;
+  }
+
+  &__title-info {
+    font-size: 11px;
+    color: #b4b4b4;
+  }
+
+  &__tech {
+    font-size: 30px;
+    color: #707070;
+  }
+
+  &__cost {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__discount {
+    width: 125px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ff5000;
+    color: white;
+  }
+  &__help {
+    -webkit-mask: url("../../assets/img/icons/help-black-48dp.svg") no-repeat;
+    mask: url("../../assets/img/icons/help-black-48dp.svg") no-repeat;
+    background-color: $linkColor;
+    width: 16px;
+    height: 16px;
+
+    &_position {
+      &_discount {
+      }
+
+      &_price {
+      }
+    }
+  }
+
+  &__title-price {
+    color: $linkColor;
+    font-size: 11px;
+  }
+
+  &__price {
+    font-size: 30px;
+  }
+}

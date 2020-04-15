@@ -1,10 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MaterialModule } from './material/material.module';
+
 
 import { AppComponent } from './app.component';
 import { CarFlashViewComponent } from './car-flash-view/car-flash-view.component';
@@ -18,7 +16,6 @@ import { CreditMenuComponent } from './credit-menu/credit-menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,10 +25,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CarTechSpecComponent,
     PageCreditComponent,
     CreditMenuComponent
+
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
