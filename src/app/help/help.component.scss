@@ -1,0 +1,56 @@
+.help {
+  display: flex;
+  align-items: center;
+
+  &__container-icon {
+    position: relative;
+    width: 100px;
+    height: 48px;
+  }
+  &__icon-paper::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    mask: url("../../assets/img/icons/paper percent.svg");
+    background-color: rgb(170, 170, 170);
+    position: absolute;
+    transform: rotate(180deg) scaleX(-1);
+  }
+  &__icon-question {
+    width: 48px;
+    height: 48px;
+    mask: url("../../assets/img/icons/help-black-48dp.svg");
+    background-color: orangered;
+    position: absolute;
+    left: 20px;
+  }
+  &__container-text {
+    width: 520px;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(211, 211, 211);
+  }
+  &__link {
+    width: 274px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(255, 186, 161);
+    border-radius: 10px;
+  }
+  &__link-text {
+    color: orangered;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    // margin: 0;
+  }
+}

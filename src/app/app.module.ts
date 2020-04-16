@@ -14,6 +14,8 @@ import { CarTechSpecComponent } from './car-tech-spec/car-tech-spec.component';
 import { PageCreditComponent } from './page-credit/page-credit.component';
 import { CreditMenuComponent } from './credit-menu/credit-menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HelpComponent } from './help/help.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactsComponent,
     CarTechSpecComponent,
     PageCreditComponent,
-    CreditMenuComponent
+    CreditMenuComponent,
+    HelpComponent,
+    ConfirmationComponent
 
   ],
   imports: [

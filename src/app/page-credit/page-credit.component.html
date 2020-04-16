@@ -1,6 +1,9 @@
 <div class="page-credit">
 
-
+  <div class="page-credit__container-header">
+    <div class="page-credit__header">Расчёт кредита</div>
+    <div class="page-credit__header page-credit__header_colored_gray">{{sended[0].brand}} {{sended[0].model}}</div>
+  </div>
 
   <div class="page-credit__car-tech-spec">
     <app-car-tech-spec [sended]="sended"></app-car-tech-spec>
@@ -11,11 +14,11 @@
   </div>
 
   <div class="page-credit__credit-menu">
-    <!-- <app-credit-menu></app-credit-menu> -->
+    <app-credit-menu></app-credit-menu>
   </div>
 
   <div class="page-credit__help">
-    <!-- <app-help></app-help> -->
+    <app-help></app-help>
   </div>
 
 </div>

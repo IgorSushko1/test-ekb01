@@ -3,9 +3,10 @@ $linkColor: #b1b1b1;
 .contacts {
   display: flex;
   flex-direction: row;
-  width: 915px;
+  width: 855px;
   justify-content: flex-end;
   align-items: center;
+  margin-top: 10px;
 
   &__icon_location {
     width: 20px;

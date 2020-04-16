@@ -1,5 +1,7 @@
 <div class="car-tech-spec">
-  <div class="car-tech-spec__image"></div>
+  <div class="car-tech-spec__container-image">
+    <div class="car-tech-spec__image"></div>
+  </div>
 
   <div class="car-tech-spec__info">
     <div class="car-tech-spec__title-head">{{sended[0].brand}} {{sended[0].model}}</div>
@@ -21,15 +23,26 @@
   </div>
 
   <div class="car-tech-spec__cost">
-    <div>
-      <div class="car-tech-spec__discount">Скидка 200 000 ₽</div>
+
+    <div class="car-tech-spec__container-cost">
+
+      <div class="car-tech-spec__discount">
+        <p>Скидка 200 000 ₽</p>
+      </div>
+
       <div class="car-tech-spec__help car-tech-spec__help_position_discount"></div>
+
     </div>
-    <div>
-      <div class="car-tech-spec__title-price">Стоимость автомобиля</div>
-      <div class="car-tech-spec__price">2 199 000 ₽</div>
+
+    <div class="car-tech-spec__container-price">
+
+      <div>
+        <div class="car-tech-spec__title-price">Стоимость автомобиля</div>
+        <div class="car-tech-spec__price">2 199 000 ₽</div>
+      </div>
+
       <div class="car-tech-spec__help car-tech-spec__help_position_price"></div>
+
     </div>
   </div>
-
 </div>

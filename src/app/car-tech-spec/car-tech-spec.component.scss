@@ -1,15 +1,26 @@
 $linkColor: #b1b1b1;
 
 .car-tech-spec {
-  width: 915px;
+  width: 861px;
   height: 155px;
   display: flex;
   flex-direction: row;
+  background-color: white;
 
-  &__image {
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+
+  &__container-image {
     width: 200px;
     height: 155px;
+  }
+
+  &__image {
     background-image: url("../../assets/bmw 1series.jpg");
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 155px;
   }
 
   &__info {
@@ -39,29 +50,48 @@ $linkColor: #b1b1b1;
   &__cost {
     display: flex;
     flex-direction: column;
+    margin-left: 70px;
+  }
+  &__container-cost {
+    display: flex;
+    align-items: center;
+    margin: 30px 0 0 0;
   }
 
   &__discount {
-    width: 125px;
     height: 25px;
-    border-radius: 50%;
+
+    padding: 0 15px;
+    border-radius: 12px;
     background-color: #ff5000;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
   &__help {
-    -webkit-mask: url("../../assets/img/icons/help-black-48dp.svg") no-repeat;
-    mask: url("../../assets/img/icons/help-black-48dp.svg") no-repeat;
+    -webkit-mask: url("../../assets/img/icons/help-black-18dp.svg") no-repeat;
+    mask: url("../../assets/img/icons/help-black-18dp.svg") no-repeat;
     background-color: $linkColor;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
 
     &_position {
       &_discount {
+        margin-left: 15px;
       }
-
       &_price {
+        margin-left: 25px;
+        margin-top: 13px;
       }
     }
+  }
+
+  &__container-price {
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
   }
 
   &__title-price {
