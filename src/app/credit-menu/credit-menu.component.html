@@ -2,29 +2,50 @@
 
   <div class="credit-menu__h">настройка кредита</div>
   <div class="credit-menu__sliders">
+
     <div class="credit-menu__container">
       <div class="credit-menu__h credit-menu__h_size_c">Первоначальный взнос</div>
       <div class="credit-menu__user-choise">
-        <span class="credit-menu__text">160 000</span>
+        <span class="credit-menu__text">{{firstPayment}}</span>
         <span class="credit-menu__text credit-menu__text_colored_grey credit-menu__text_shrinked"> ₽</span>
-        <span class="credit-menu__text credit-menu__text_colored_grey">10%</span>
+        <span class="credit-menu__text credit-menu__text_colored_grey">{{firstPayInPercent}} %</span>
+      </div>
+      <div class="credit-menu__container-slider">
+        <mat-slider min={{carMinPrice*0.1}} max={{carMinPrice}} step="10000" [(ngModel)]="numFirstPayment"
+          class="credit-menu__slider" (change)="handlePrepayment()">
+        </mat-slider>
       </div>
     </div>
+
 
     <div class="credit-menu__container">
       <div class="credit-menu__h credit-menu__h_size_c">Готов платить в месяц</div>
       <div class="credit-menu__user-choise">
-        <span class="credit-menu__text">до 10 000</span>
+        <span class="credit-menu__text">до {{perMonthLimit}}</span>
         <span class="credit-menu__text credit-menu__text_colored_grey credit-menu__text_shrinked"> ₽</span>
       </div>
+      <div class="credit-menu__container-slider">
+        <mat-slider min={{minMonthLimit}} max={{maxMonthLimit}} step="1000" [(ngModel)]="monthLimit"
+          class="credit-menu__slider slider-per-month" (change)="handlePay()">
+        </mat-slider>
 
+      </div>
     </div>
     <div class="credit-menu__container">
       <div class="credit-menu__h credit-menu__h_size_c">Срок кредита</div>
       <div class="credit-menu__user-choise">
-        <span class="credit-menu__text">60</span>
+        <span class="credit-menu__text">{{termInMonth}}</span>
         <span class="credit-menu__text credit-menu__text_colored_grey credit-menu__text_shrinked"> месяцев</span>
-        <span class="credit-menu__text credit-menu__text_colored_grey">5 лет</span>
+        <span *ngIf="termInMonth" class="credit-menu__text credit-menu__text_colored_grey">{{termInYears}}
+          {{declensionOfYear}}
+        </span>
+      </div>
+      <div class="credit-menu__container-slider">
+
+        <mat-slider min={{minMonth}} max={{maxMonth}} step="1" [(ngModel)]="termInMonth"
+          class="credit-menu__slider slider__date-in-month" (change)="handleMonth()">
+
+        </mat-slider>
       </div>
     </div>
   </div>
@@ -33,7 +54,7 @@
 
     <div class="credit-menu__container credit-menu__container_unbordered">
       <div class="credit-menu__h credit-menu__h_size_c">Сумма выплат</div>
-      <div class="credit-menu__text-total">от 141 579 ₽</div>
+      <div class="credit-menu__text-total">от {{yearBottomLimit}} ₽</div>
     </div>
 
     <div class="credit-menu__container credit-menu__container_unbordered">
@@ -43,7 +64,7 @@
 
     <div class="credit-menu__container credit-menu__container_unbordered">
       <div class="credit-menu__h credit-menu__h_size_c">Платежи в месяц</div>
-      <div class="credit-menu__text-total credit-menu__text-total_bold"> от 8 890 ₽/мес</div>
+      <div class="credit-menu__text-total credit-menu__text-total_bold"> от {{perMonthPayment}} ₽/мес</div>
     </div>
 
     <div class="credit-menu__send">

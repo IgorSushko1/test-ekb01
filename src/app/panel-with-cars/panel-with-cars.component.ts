@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarFlashViewComponent } from '../car-flash-view/car-flash-view.component';
+import { CarsService } from '../cars.service';
+import { Cars } from '../cars.interface';
 
 @Component({
   selector: 'app-panel-with-cars',
@@ -8,7 +10,13 @@ import { CarFlashViewComponent } from '../car-flash-view/car-flash-view.componen
 })
 export class PanelWithCarsComponent implements OnInit {
 
-  constructor() { }
+  cars: Cars[];
+
+  constructor(private carsService: CarsService) { }
+
+  getCars(): void {
+    this.cars = this.carsService.getCars();
+  }
 
   ngOnInit(): void {
   }

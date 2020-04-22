@@ -27,10 +27,11 @@
   &__container {
     border: 1px solid grey;
     border-radius: 10px 10px 0 0;
-    width: 270px;
+    width: 250px;
     height: 110px;
     margin-right: 20px;
     padding: 18px;
+    border-bottom: none;
 
     &_unbordered {
       border: none;
@@ -45,6 +46,7 @@
     display: flex;
     width: 235px;
     justify-content: space-between;
+    margin-top: 40px;
   }
 
   &__calculation {
@@ -57,7 +59,6 @@
     font-size: larger;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-top: 30px;
 
     &_shrinked {
       flex-shrink: 3;
@@ -71,6 +72,18 @@
         font-weight: 500;
       }
     }
+  }
+
+  &__container-slider {
+    width: 270px;
+    position: relative;
+    top: 22px;
+  }
+
+  &__slider {
+    width: 303px;
+    position: relative;
+    left: -27px;
   }
 
   &__text-total {
@@ -91,7 +104,6 @@
     align-items: center;
     background-color: orangered;
     color: white;
-    // padding: 0 40px;
     height: 57px;
     border-radius: 10px;
     width: 285px;

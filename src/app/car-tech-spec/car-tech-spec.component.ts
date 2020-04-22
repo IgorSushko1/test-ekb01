@@ -18,12 +18,12 @@ export class CarTechSpecComponent implements OnInit {
 
 
   log() {
-    // console.log(this.carsFromParent);
+    ;
   }
 
 
   ngOnInit(): void {
-    // this.log()
+
   }
 
 }

@@ -12,4 +12,5 @@ import { cars } from './cars';
 export class AppComponent {
   title = 'test-ekb01';
   cars = cars;
+  sliderValue: number;
 }
