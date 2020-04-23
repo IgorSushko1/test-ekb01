@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'confirmation', component: ConfirmationComponent },
   { path: 'main', component: PanelWithCarsComponent },
   { path: 'credit/:id', component: PageCreditComponent },
-  { path: '', redirectTo: '/main', pathMatch: 'full' },
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
 ]
 
 @NgModule({
