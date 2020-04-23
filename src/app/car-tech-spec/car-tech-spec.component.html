@@ -1,23 +1,23 @@
 <div class="car-tech-spec">
   <div class="car-tech-spec__container-image">
-    <div class="car-tech-spec__image"></div>
+    <img class="car-tech-spec__image" src={{car.url}}>
   </div>
 
   <div class="car-tech-spec__info">
-    <div class="car-tech-spec__title-head">{{sended[0].brand}} {{sended[0].model}}</div>
+    <div class="car-tech-spec__title-head">{{car.brand}} {{car.model}}</div>
 
     <div class="car-tech-spec__spec">
       <div>
-        <div class="car-tech-spec__title-info">{{sended[0].fuelType}}, {{sended[0].horsePower}} л.с</div>
-        <div class="car-tech-spec__tech">{{sended[0].engineVolume}} л</div>
+        <div class="car-tech-spec__title-info">{{car.fuelType}}, {{car.horsePower}} л.с</div>
+        <div class="car-tech-spec__tech">{{car.engineVolume}} л</div>
       </div>
       <div>
-        <div class="car-tech-spec__title-info">{{sended[0].drivingVeels}}</div>
-        <div class="car-tech-spec__tech">{{sended[0].drivingScheme}}</div>
+        <div class="car-tech-spec__title-info">{{car.drivingVeels}}</div>
+        <div class="car-tech-spec__tech">{{car.drivingScheme}}</div>
       </div>
       <div>
-        <div class="car-tech-spec__title-info">{{sended[0].gears}} ступеней</div>
-        <div class="car-tech-spec__tech">{{sended[0].transmission}}</div>
+        <div class="car-tech-spec__title-info">{{car.gears}} ступеней</div>
+        <div class="car-tech-spec__tech">{{car.transmission}}</div>
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@
 
       <div>
         <div class="car-tech-spec__title-price">Стоимость автомобиля</div>
-        <div class="car-tech-spec__price">2 199 000 ₽</div>
+        <div class="car-tech-spec__price">{{carMinPrice}} ₽</div>
       </div>
 
       <div class="car-tech-spec__help car-tech-spec__help_position_price"></div>

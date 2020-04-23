@@ -37,6 +37,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTreeModule } from '@angular/material/tree';
 // import { DndComponent } from './dnd/dnd.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatCardModule,
     MatMenuModule,
     MatTreeModule,
-    DragDropModule
+    DragDropModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

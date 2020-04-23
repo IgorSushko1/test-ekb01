@@ -3,12 +3,13 @@ export interface Cars {
   model: string;
   url: string;
   amount: number;
-  minPrice: string;
+  minPrice: number;
   engineVolume: number;
   horsePower: number;
   transmission: string;
   drivingVeels: string;
   drivingScheme: string;
   gears: number;
-  fuelType: string
+  fuelType: string,
+  id: number
 }

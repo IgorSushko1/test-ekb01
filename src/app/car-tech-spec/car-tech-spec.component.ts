@@ -9,21 +9,14 @@ import { Cars } from '../cars.interface';
 })
 export class CarTechSpecComponent implements OnInit {
 
-  @Input() sended: Cars[];
+  @Input() car: Cars;
 
-  car = this.sended;
+  carMinPrice: string;
 
   constructor() { }
 
-
-
-  log() {
-    ;
-  }
-
-
   ngOnInit(): void {
-
+    this.carMinPrice = this.car.minPrice.toLocaleString('ru-RU');
   }
 
 }

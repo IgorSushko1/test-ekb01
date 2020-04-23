@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CarFlashViewComponent } from '../car-flash-view/car-flash-view.component';
 import { CarsService } from '../cars.service';
 import { Cars } from '../cars.interface';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-panel-with-cars',
@@ -10,15 +10,26 @@ import { Cars } from '../cars.interface';
 })
 export class PanelWithCarsComponent implements OnInit {
 
-  cars: Cars[];
+  // cars: Cars[];
+  // cars: Observable<Cars[]>;
 
-  constructor(private carsService: CarsService) { }
 
-  getCars(): void {
-    this.cars = this.carsService.getCars();
-  }
+  constructor(
+    private carsService: CarsService,
+  ) { }
 
-  ngOnInit(): void {
+  // getCars(): void {
+  // this.carsService.getCars().subscribe(car => this.cars = car);
+
+  // this.cars = this.carsService.getCars();
+  // console.log(`вывел же параметры ` + this.cars);
+
+  // }
+
+  ngOnInit() {
+    // this.getCars();
+    // console.log(this.cars);
+
   }
 
 }

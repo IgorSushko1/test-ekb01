@@ -10,6 +10,9 @@
     height: 130px;
     margin: 13px auto 0;
     display: block;
+    &:hover {
+      margin: 9px auto 0;
+    }
   }
 
   &__amount {

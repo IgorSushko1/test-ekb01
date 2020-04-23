@@ -13,14 +13,15 @@ $linkColor: #b1b1b1;
   &__container-image {
     width: 200px;
     height: 155px;
+    display: flex;
+    align-items: center;
   }
 
   &__image {
-    background-image: url("../../assets/bmw 1series.jpg");
-    background-size: 200px auto;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 155px;
+    width: 110%;
+    object-fit: cover;
+    height: 70%;
+    transform: rotateY(180deg);
   }
 
   &__info {

@@ -12,4 +12,9 @@ export class ConfirmationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  closeConfirmation() {
+    let okko = document.getElementsByClassName('page-credit__confirmation');
+    okko[0]['style'].display = 'none';
+  }
+
 }

@@ -1,7 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Cars } from '../cars.interface';
-import { ProtractorExpectedConditions } from 'protractor';
-import { PercentPipe } from '@angular/common';
 
 @Component({
   selector: 'app-credit-menu',
@@ -11,14 +9,15 @@ import { PercentPipe } from '@angular/common';
 
 export class CreditMenuComponent implements OnInit {
 
+  @Input() car: Cars;
+  carForPage: Cars;
   constructor() { }
 
   math = Math;
-
-  carMinPrice = 2199000;
+  carMinPrice: number;
 
   firstPayment: string;
-  numFirstPayment: number = Math.round(Math.floor(this.carMinPrice / 2) / 1000) * 1000;
+  numFirstPayment: number;
   firstPayInPercent: number = Math.floor((this.numFirstPayment / this.carMinPrice) * 100);
 
   maxMonthLimit: number = 100000;
@@ -114,15 +113,13 @@ export class CreditMenuComponent implements OnInit {
       percentUp = Math.floor(needToPay * percent);
       totalPercent += percentUp;
     }
-
     this.total = this.carMinPrice + totalPercent - hadMoney;
     this.payPerMonth = this.total / months;
-
   }
 
   mathMonth(value: number) {
     let month = this.total / value;
-    console.log('month AFTER === ' + month);
+
     month = Math.ceil(month * this.termInMonth);
 
     if (month <= this.maxMonth && month >= this.minMonth) {
@@ -151,8 +148,6 @@ export class CreditMenuComponent implements OnInit {
     }
   }
 
-
-
   updateFields() {
     let yearBottomLimit = Math.ceil(this.monthLimit * 12);
     const percent = Math.floor((this.numFirstPayment / this.carMinPrice) * 100);
@@ -164,8 +159,7 @@ export class CreditMenuComponent implements OnInit {
     this.perMonthPayment = Math.ceil(this.payPerMonth).toLocaleString('ru-RU');
     this.yearBottomLimit = yearBottomLimit.toLocaleString('ru-RU');
     this.firstPayInPercent = percent;
-
-
+    this.calcYearsOfCredit(this.termInMonth);
   }
 
   numberToString(n: number, toStr?: string) {
@@ -188,19 +182,19 @@ export class CreditMenuComponent implements OnInit {
           this.termInYears > 4 ? 'лет' : 'что-то пошло не так';
   }
 
+  showConfirmation() {
+    let okko = document.getElementsByClassName('page-credit__confirmation');
+    okko[0]['style'].display = 'flex';
+  }
+
   ngOnInit(): void {
+    this.carForPage = this.car;
+    this.carMinPrice = +this.car.minPrice;
+    this.numFirstPayment = Math.round(Math.floor(this.carMinPrice / 2) / 1000) * 1000;
 
     this.mathBodyOfCredit();
     this.mathPay();
     this.updateFields();
-
-    // this.numberToString(this.numFirstPayment, 'firstPayment');
-    // this.numberToString(this.monthLimit, 'perMonthLimit');
-    // this.numberToString(this.yearLimit, 'yearBottomLimit');
-    // this.numberToString(this.monthPayment, 'perMonthPayment');
-
-    // const percent = Math.floor(this.numFirstPayment / this.carMinPrice);
-    // this.firstPayInPercent = percent;
   }
 
 }
