@@ -11,7 +11,7 @@
     content: "";
     width: 40px;
     height: 40px;
-    mask: url("../../assets/img/icons/paper percent.svg");
+    mask: url("icons/paper percent.svg");
     background-color: rgb(170, 170, 170);
     position: absolute;
     transform: rotate(180deg) scaleX(-1);
@@ -19,7 +19,7 @@
   &__icon-question {
     width: 48px;
     height: 48px;
-    mask: url("../../assets/img/icons/help-black-48dp.svg");
+    mask: url("icons/help-black-48dp.svg");
     background-color: orangered;
     position: absolute;
     left: 20px;
