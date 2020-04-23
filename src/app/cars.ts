@@ -2,7 +2,7 @@ export const cars = [
   {
     brand: 'BMW',
     model: '1 серии',
-    url: '../assets/bmw 1series.jpg',
+    url: 'bmw 1series.jpg',
     amount: 1,
     minPrice: 1670000,
     engineVolume: 1.1,
@@ -17,7 +17,7 @@ export const cars = [
   {
     brand: 'BMW',
     model: '3 серии',
-    url: '../../assets/bmw 3series.jpg',
+    url: 'bmw 3series.jpg',
     amount: 126,
     minPrice: 1940000,
     engineVolume: 2.0,
@@ -32,7 +32,7 @@ export const cars = [
   {
     brand: 'BMW',
     model: 'x2',
-    url: '../../assets/bmw x2.jpg',
+    url: 'bmw x2.jpg',
     amount: 1,
     minPrice: 2320000,
     engineVolume: 3.0,

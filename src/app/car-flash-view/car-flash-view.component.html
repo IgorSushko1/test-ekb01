@@ -1,5 +1,5 @@
 <div class="car-flash-view" *ngFor="let car of cars">
-  <a routerLink="/credit/{{car.id}}"><img src={{car.url}} class="car-flash-view__photo" /></a>
+  <a routerLink="/credit/{{car.id}}"><img src="./assets/{{car.url}}" class="car-flash-view__photo" /></a>
   <div class="car-flash-view__amount">{{car.amount}} авто</div>
   <div class="car-flash-view__name">{{car.model | uppercase}}</div>
   <div class="car-flash-view__min-price">от {{car.minPrice.toLocaleString('ru-RU')}} ₽</div>
