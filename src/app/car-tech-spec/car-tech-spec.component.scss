@@ -72,8 +72,8 @@ $linkColor: #b1b1b1;
   }
 
   &__help {
-    -webkit-mask: url("icons/help-black-18dp.svg") no-repeat;
-    mask: url("icons/help-black-18dp.svg") no-repeat;
+    -webkit-mask: url("/icons/help-black-18dp.svg") no-repeat;
+    mask: url("/icons/help-black-18dp.svg") no-repeat;
     background-color: $linkColor;
     width: 18px;
     height: 18px;
