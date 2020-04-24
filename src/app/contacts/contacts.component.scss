@@ -11,9 +11,7 @@ $linkColor: #b1b1b1;
   &__icon_location {
     width: 20px;
     height: 20px;
-    -webkit-mask: url("/icons/location.svg") no-repeat;
-    mask: url("/icons/location.svg") no-repeat;
-    background-color: $linkColor;
+    fill: $linkColor;
   }
 
   &__adress {
@@ -24,9 +22,7 @@ $linkColor: #b1b1b1;
   &__icon_phone {
     width: 20px;
     height: 20px;
-    -webkit-mask: url("/icons/phone.svg") no-repeat;
-    mask: url("/icons/phone.svg") no-repeat;
-    background-color: $linkColor;
+    fill: $linkColor;
     margin-left: 20px;
   }
 

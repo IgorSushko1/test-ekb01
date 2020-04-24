@@ -10,7 +10,7 @@ import { cars } from './cars';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test-ekb01';
-  cars = cars;
+  title: string = 'test-ekb01';
+  cars: Cars[] = cars;
   sliderValue: number;
 }
