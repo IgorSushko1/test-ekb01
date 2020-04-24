@@ -36,8 +36,7 @@
   }
 
   &__exit {
-    mask: url("/src/app/confirmation/icons/clear-24px.svg") no-repeat;
-    background-color: #dedede;
+    fill: #dedede;
     width: 24px;
     height: 24px;
     position: absolute;
@@ -51,7 +50,6 @@
   &__image {
     width: 500px;
     height: 500px;
-    // background-image: url("../../assets/img/icons/rocket.jpg");
     background-size: 500px;
     background-repeat: no-repeat;
   }
